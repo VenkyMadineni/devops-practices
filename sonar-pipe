@@ -14,9 +14,6 @@ node{
 					-Dsonar.projectKey=Vprofile \
 					-Dsonar.host.url=http://192.168.33.10:9000 \
 					-Dsonar.login=6e80c0467e1f42df2dfaf0e43e24d419fed6783a
-					-Dsonar.java.binaries=target/test-classes/com/visualpathit/account/controllerTest/ \
-					-Dsonar.junit.reportsPath=target/surefire-reports/ \
-					-Dsonar.jacoco.reportsPath=target/jacoco.exec \
 					-Dsonar.java.checkstyle.reportPaths=target/checkstyle-result.xml'''
         }
     }
