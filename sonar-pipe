@@ -8,7 +8,7 @@ node{
    }
    
    stage('SonarQube Analysis') {
-        
+        def scannerHome = tool 'sonarscanner4';
         withSonarQubeEnv('sonarscanner4') { 
           sh '''${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=vprofile \
                    -Dsonar.projectName=vprofile \
