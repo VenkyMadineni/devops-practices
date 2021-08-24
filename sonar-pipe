@@ -8,10 +8,12 @@ node{
    }
    
    stage('SonarQube Analysis') {
-        def scannerHome = tool 'sonarscanner4';
+        
         withSonarQubeEnv('sonarscanner4') { 
-          sh '''${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=vprofile \
+          sh '''   -Dsonar.projectKey=vprofile \
                    -Dsonar.projectName=vprofile \
+				   -Dsonar.host.url=http://192.168.33.10:9000 \
+				   -Dsonar.login=6e80c0467e1f42df2dfaf0e43e24d419fed6783a
                    -Dsonar.projectVersion=1.0 \
                    -Dsonar.sources=src/ \
                    -Dsonar.java.binaries=target/test-classes/com/visualpathit/account/controllerTest/ \
@@ -23,3 +25,4 @@ node{
 }
 
 
+ 
