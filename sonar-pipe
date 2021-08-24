@@ -1,10 +1,10 @@
 node{
    stage('SCM Checkout'){
-     git 'https://github.com/javahometech/my-app'
+     git 'https://github.com/VenkyMadineni/devops-practices.git'
    }
    stage('Compile-Package'){
          
-      sh "mvn package"
+      sh "mvn clean package"
    }
    
    stage('SonarQube Analysis') {
@@ -13,7 +13,7 @@ node{
           sh '''mvn sonar:sonar \
 					-Dsonar.projectKey=Vprofile \
 					-Dsonar.host.url=http://192.168.33.10:9000 \
-					-Dsonar.login=6e80c0467e1f42df2dfaf0e43e24d419fed6783a'''
+					-Dsonar.login=09717285218f66911b380336d140272b4400827e'''
         }
     }
 }
