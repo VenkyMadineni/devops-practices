@@ -41,7 +41,7 @@ node{
         stage('CODE ANALYSIS with SONARQUBE') {
           
             withSonarQubeEnv('sonarscanner4') {
-            sh '''mvn sonar:sonar \
+				sh '''mvn sonar:sonar \
 					-Dsonar.projectKey=Vprofile \
 					-Dsonar.host.url=http://192.168.33.10:9000 \
 					-Dsonar.login=09717285218f66911b380336d140272b4400827e
@@ -56,7 +56,7 @@ node{
                waitForQualityGate abortPipeline: true
             }
           }
-        }
+        
    
 }
 
