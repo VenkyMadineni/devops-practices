@@ -1,9 +1,12 @@
-node{
-   stage('SCM Checkout'){
-     git 'https://github.com/VenkyMadineni/devops-practices.git'
+pipeline{
+	agents any
+	stages{
+	
+	stage('SCM Checkout'){
+		git 'https://github.com/VenkyMadineni/devops-practices.git'
    }
    
-   stage('BUILD'){
+	stage('BUILD'){
             steps {
                 sh 'mvn clean install -DskipTests'
             }
@@ -57,7 +60,7 @@ node{
             }
           }
         
-   
+   }
 }
 
 
