@@ -33,8 +33,8 @@ node{
             withSonarQubeEnv('sonarscanner4') {
 				sh '''mvn sonar:sonar \
 					-Dsonar.projectKey=Vprofile \
-					-Dsonar.host.url=http://192.168.33.10:9000 \
-					-Dsonar.login=09717285218f66911b380336d140272b4400827e
+					-Dsonar.host.url=http://192.168.162.176:9000 \
+					-Dsonar.login=9c82ff3256985614a0615d0ec798c4003ac03de5
 					-Dsonar.projectVersion=1.0 \
 					-Dsonar.sources=src/ \
 					-Dsonar.java.binaries=target/test-classes/com/visualpathit/account/controllerTest/ \
