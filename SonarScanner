@@ -48,7 +48,8 @@ pipeline {
   
           steps {
             withSonarQubeEnv('sonarscanner4') {
-               sh '''${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=vprofile \
+               sh '''mvn sonar:sonar \
+				   -Dsonar.projectKey=vprofile \
                    -Dsonar.projectName=vprofile-repo \
                    -Dsonar.host.url=http://192.168.33.10:9000 \
 				   -Dsonar.login=8768063b5069aa349be5631aa5ff258352fb9f2d \
